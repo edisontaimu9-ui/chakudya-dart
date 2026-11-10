@@ -86,7 +86,7 @@ for ns in namespaces:
             v = safe(re.sub(r"_(\w)", lambda x: x.group(1).upper(), p))
             while v in seen: v += "2"
             seen.add(v); params.append((p, v))
-        tmpl = path
+        tmpl = path.replace("$", "\\$")  # FHIR operations such as /fhir/Condition/$diagnose
         for p, v in params:
             tmpl = tmpl.replace("{" + p + "}", "${_enc(" + v + ")}")
         req = "".join(f"Object {v}, " for _, v in params)

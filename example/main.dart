@@ -8,7 +8,7 @@ Future<void> main() async {
     print(maize);
 
     final growth = await cnr.growth.assess(
-      body: {'sex': 'female', 'age_months': 12, 'weight_kg': 9},
+      query: {'sex': 'female', 'age_months': 12, 'weight_kg': 9},
     );
     print(growth);
 

@@ -19,7 +19,7 @@ import 'package:chakudya_sdk/chakudya_sdk.dart';
 final cnr = ChakudyaClient(apiKey: const String.fromEnvironment('CHAKUDYA_KEY'));
 
 final maize = await cnr.foods.search(query: {'q': 'maize'});
-final growth = await cnr.growth.assess(body: {'sex': 'female', 'age_months': 12, 'weight_kg': 9});
+final growth = await cnr.growth.assess(query: {'sex': 'female', 'age_months': 12, 'weight_kg': 9});
 final dri = await cnr.dri.list(query: {'life_stage': 'female_19_30'});
 ```
 

@@ -34,9 +34,10 @@ void main() {
       seen = req;
       return jsonRes({'status': 'success', 'data': {'ok': true}});
     });
-    final r = await c.growth.assess(body: {'sex': 'female', 'age_months': 12, 'weight_kg': 9});
+    final r = await c.activityEnergy.calculate(body: {'sex': 'female', 'age_months': 12, 'weight_kg': 9});
     expect(r, {'ok': true});
     expect(seen.method, 'POST');
+    expect(seen.url.path, '/activity-energy/calculate');
     expect(jsonDecode(seen.body)['age_months'], 12);
     expect(seen.headers['Content-Type'], 'application/json');
   });

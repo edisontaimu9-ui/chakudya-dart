@@ -474,22 +474,22 @@ class FhirApi {
   final ChakudyaClient _c;
   /// `POST /fhir/Bundle/$care-context`
   Future<dynamic> bundleCareContext({Map<String, dynamic>? body, Map<String, dynamic>? query}) =>
-      _c.request('POST', '/fhir/Bundle/$care-context', body: body, query: query);
+      _c.request('POST', '/fhir/Bundle/\$care-context', body: body, query: query);
   /// `POST /fhir/Bundle/$ncp-document`
   Future<dynamic> bundleNcpDocument({Map<String, dynamic>? body, Map<String, dynamic>? query}) =>
-      _c.request('POST', '/fhir/Bundle/$ncp-document', body: body, query: query);
+      _c.request('POST', '/fhir/Bundle/\$ncp-document', body: body, query: query);
   /// `POST /fhir/Bundle/$nutrition-assessment`
   Future<dynamic> bundleNutritionAssessment({Map<String, dynamic>? body, Map<String, dynamic>? query}) =>
-      _c.request('POST', '/fhir/Bundle/$nutrition-assessment', body: body, query: query);
+      _c.request('POST', '/fhir/Bundle/\$nutrition-assessment', body: body, query: query);
   /// `POST /fhir/Bundle/$validate-document`
   Future<dynamic> bundleValidateDocument({Map<String, dynamic>? body, Map<String, dynamic>? query}) =>
-      _c.request('POST', '/fhir/Bundle/$validate-document', body: body, query: query);
+      _c.request('POST', '/fhir/Bundle/\$validate-document', body: body, query: query);
   /// `POST /fhir/CarePlan/$intervene`
   Future<dynamic> carePlanIntervene({Map<String, dynamic>? body, Map<String, dynamic>? query}) =>
-      _c.request('POST', '/fhir/CarePlan/$intervene', body: body, query: query);
+      _c.request('POST', '/fhir/CarePlan/\$intervene', body: body, query: query);
   /// `POST /fhir/CarePlan/$monitor`
   Future<dynamic> carePlanMonitor({Map<String, dynamic>? body, Map<String, dynamic>? query}) =>
-      _c.request('POST', '/fhir/CarePlan/$monitor', body: body, query: query);
+      _c.request('POST', '/fhir/CarePlan/\$monitor', body: body, query: query);
   /// `GET /fhir/CodeSystem/{name}`
   Future<dynamic> codeSystem(Object name, {Map<String, dynamic>? query}) =>
       _c.request('GET', '/fhir/CodeSystem/${_enc(name)}', query: query);
@@ -501,10 +501,10 @@ class FhirApi {
       _c.request('GET', '/fhir/ConceptMap/${_enc(id)}', query: query);
   /// `POST /fhir/ConceptMap/$translate`
   Future<dynamic> conceptMapTranslate({Map<String, dynamic>? body, Map<String, dynamic>? query}) =>
-      _c.request('POST', '/fhir/ConceptMap/$translate', body: body, query: query);
+      _c.request('POST', '/fhir/ConceptMap/\$translate', body: body, query: query);
   /// `POST /fhir/Condition/$diagnose`
   Future<dynamic> conditionDiagnose({Map<String, dynamic>? body, Map<String, dynamic>? query}) =>
-      _c.request('POST', '/fhir/Condition/$diagnose', body: body, query: query);
+      _c.request('POST', '/fhir/Condition/\$diagnose', body: body, query: query);
   /// `GET /fhir/AuditEvent`
   Future<dynamic> getAuditEvent({Map<String, dynamic>? query}) =>
       _c.request('GET', '/fhir/AuditEvent', query: query);
@@ -519,31 +519,31 @@ class FhirApi {
       _c.request('GET', '/fhir/Questionnaire/${_enc(id)}', query: query);
   /// `POST /fhir/Goal/$evaluate`
   Future<dynamic> goalEvaluate({Map<String, dynamic>? body, Map<String, dynamic>? query}) =>
-      _c.request('POST', '/fhir/Goal/$evaluate', body: body, query: query);
+      _c.request('POST', '/fhir/Goal/\$evaluate', body: body, query: query);
   /// `GET /fhir/metadata`
   Future<dynamic> metadata({Map<String, dynamic>? query}) =>
       _c.request('GET', '/fhir/metadata', query: query);
   /// `POST /fhir/Observation/$assess-nutrition`
   Future<dynamic> observationAssessNutrition({Map<String, dynamic>? body, Map<String, dynamic>? query}) =>
-      _c.request('POST', '/fhir/Observation/$assess-nutrition', body: body, query: query);
+      _c.request('POST', '/fhir/Observation/\$assess-nutrition', body: body, query: query);
   /// `POST /fhir/Observation/$evaluate-growth`
   Future<dynamic> observationEvaluateGrowth({Map<String, dynamic>? body, Map<String, dynamic>? query}) =>
-      _c.request('POST', '/fhir/Observation/$evaluate-growth', body: body, query: query);
+      _c.request('POST', '/fhir/Observation/\$evaluate-growth', body: body, query: query);
   /// `POST /fhir/Observation/$screen`
   Future<dynamic> observationScreen({Map<String, dynamic>? body, Map<String, dynamic>? query}) =>
-      _c.request('POST', '/fhir/Observation/$screen', body: body, query: query);
+      _c.request('POST', '/fhir/Observation/\$screen', body: body, query: query);
   /// `GET /fhir/OperationDefinition/{id}`
   Future<dynamic> operationDefinition(Object id, {Map<String, dynamic>? query}) =>
       _c.request('GET', '/fhir/OperationDefinition/${_enc(id)}', query: query);
   /// `POST /fhir/QuestionnaireResponse/$validate`
   Future<dynamic> questionnaireResponseValidate({Map<String, dynamic>? body, Map<String, dynamic>? query}) =>
-      _c.request('POST', '/fhir/QuestionnaireResponse/$validate', body: body, query: query);
+      _c.request('POST', '/fhir/QuestionnaireResponse/\$validate', body: body, query: query);
   /// `GET /fhir/StructureDefinition/{name}`
   Future<dynamic> structureDefinition(Object name, {Map<String, dynamic>? query}) =>
       _c.request('GET', '/fhir/StructureDefinition/${_enc(name)}', query: query);
   /// `POST /fhir/$validate`
   Future<dynamic> validate({Map<String, dynamic>? body, Map<String, dynamic>? query}) =>
-      _c.request('POST', '/fhir/$validate', body: body, query: query);
+      _c.request('POST', '/fhir/\$validate', body: body, query: query);
 }
 
 /// `foods` routes.
