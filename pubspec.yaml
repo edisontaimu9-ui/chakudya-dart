@@ -1,0 +1,20 @@
+name: chakudya_sdk
+description: Dart and Flutter client for the Chakudya Nutrition Registry (CNR), Malawi's open food and clinical nutrition API (api.chakudya.xyz).
+version: 1.0.0
+repository: https://github.com/edisontaimu9-ui/chakudya-dart
+homepage: https://sdk.chakudya.xyz
+topics:
+  - nutrition
+  - malawi
+  - health
+  - flutter
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  http: ^1.2.0
+
+dev_dependencies:
+  lints: ^3.0.0
+  test: ^1.24.0
